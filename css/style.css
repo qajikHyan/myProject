@@ -148,6 +148,7 @@ body {
 	left: 0;
 	width: 100%;
 	z-index: 9999;
+	background-color: #fff;
 }
 .logo-img{
 	width: 130px;
@@ -155,9 +156,25 @@ body {
 .menu{
 	margin-right:  110px;
 }
-.menu>a{
-	width: 67px;
-	height: 16px;
+.menu_btn{
+	width: 18px;
+	height: 17px;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.menu_btn>span{
+	display: block;
+	width: 18px;
+	height: 3px;
+	background-color: #0d1126;
+	border-radius: 50px;
+}
+.menu_btn>span:nth-child(3){
+	width: 12px;
+}
+.menu>.menuWrapper>a{
 	font-size: 16px;
 	font-weight: bold;
 	font-style: normal;
@@ -167,10 +184,10 @@ body {
 	text-align: left;
 	color: #0d1126;
 }
-.menu>a:nth-child(1){
+.right{
 	margin-right: 36px;
 }
-.menu>a:hover{
+.menu>.menuWrapper>a:hover{
 	text-decoration: none;
 	color: #000000;
 }
@@ -260,7 +277,65 @@ body {
 	opacity: 0.8;
 	text-decoration: none;
 }
-
+.display_f{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	position: relative;
+	padding-right: 110px !important;
+}
+.display_f2{
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+}
+.mobile{
+	display: none;
+}
+.logo-mobile{
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+.close-div{
+	width: 39px;
+	height: 39px;
+	border-radius: 15px;
+	background-color: #ffd7c94f;
+	position: relative;
+}
+.close-div>span{
+	border-radius: 10px;
+	position: absolute;
+	background-color:  #fa6102;
+	width: 20px;
+	height: 3px;
+	top: 50%;
+	left: 50%;
+	transform-origin: 0 0;
+}
+.close-div>span:nth-child(1){
+  	transform: rotate(45deg) translate(-50%, -50%);
+}
+.close-div>span:nth-child(2){
+	transform: rotate(-45deg) translate(-50%, -50%);
+}
+.decore_4{
+	display: none;
+	width: 32px;
+	height: 8px;
+	border-radius: 36px;
+	background-color: #8e95ff;
+	margin: 60px 0 20px 0;
+}
+.btn1-mobile{
+	display: none;
+}
+.icons-mobile{
+	display: none;
+}
 /* section 2 -------------------------------------------------------- */
 .sec2_imgs{
 	left: -122px;
@@ -315,6 +390,7 @@ body {
 
 @media (min-width:768px) {
 
+
 	.navigation {
 		/* padding: 30px; */
 	}
@@ -323,11 +399,142 @@ body {
 		font-size: 18px;
 	}
 }
-@media (max-width:1200px) {
+@media (max-width:992px) {
+	.header{
+		padding: 0 33px;
+	}
+	.menu{
+		display: none;
+	}
+	.menu_btn{
+		display: flex;
+	}
+	.icons{
+		display: none;
+	}
+	.navigation{
+		right: 17px;
+		top: 65%;
+	}
+	.btn1{
+		bottom: 45px;
+		right: 33px;
+		left: 33px;
+		text-align: center;
+	}
+	.Rectangle-364{
+		margin-top: 0;
+	}
+	.title1{
+		font-size: 31px;
+	}
+	.text1{
+		margin-top: 0;
+		font-size: 12px;
+	}
+	.col-xl-6 h3{
+		margin-top: 14px !important;
+		font-size: 14px;
+	}
 	.section-img>img, .section-img>.imgs{
 		display: none;
 	}
 	.d1{
 		display: none;
+	}
+	.col-xl-6{
+		padding-right: 33px !important;
+		padding-left: 33px !important;
+	}
+	.display_f{
+		align-items: flex-start;
+		justify-content: flex-start;
+		padding-right: 33px !important;
+		padding-left: 33px !important;
+	}
+	.mobile{
+		display: block;
+		width: 100%;
+		height: 280px;
+		background-color: #e8eaff;
+		border-radius: 20px;
+	}
+	.section-three .mobile{
+		height: 240px;
+	}
+	.section-four .mobile{
+		height: 240px;
+	}
+	.section-img{
+		width: 100%;
+	}
+	.Lets-Finin{
+		text-align: left;
+	}
+	.display_f2{
+		justify-content: flex-end;
+	}
+	.menu{
+		display: block;
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		z-index: 99999;
+		top: 0;
+		left: 0;
+		background-color: rgba(11, 14, 47, 0.65);
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.2s;
+	}
+	.menuWrapper{
+		width: 100%;
+		background-color: #fff;
+		padding: 53px 33px 33px 33px;
+		border-radius: 0 0 40px 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transform: translateY(-100%);
+		visibility: hidden;
+		transition: 0.5s;
+	}
+	.open-menuWrapper{
+		transform: translateY(0);
+		visibility: visible;
+	}
+	.open-menu{
+		visibility: visible;
+		opacity: 1;
+	}
+	.right{
+		margin-right: 0;
+	}
+	.logo-mobile{
+		display: flex;
+	}
+	.logo-img-mobile{
+		width: 100px;
+	}
+	.decore_4{
+		display: block;
+	}
+	.menu>.menuWrapper>a{
+		font-size: 29px;
+  		font-weight: 800;
+	}
+	.btn1-mobile{
+		display: block;
+		font-size: 16px;
+		color: #fff;
+		background-color: #47c690;
+		padding: 11px 31px;
+		border: none;
+		border-radius: 50px;
+		margin: 49px 0 33px 0;
+	}
+	.icon-mb{
+		width: 31px;
+		margin: 8px;
 	}
 }

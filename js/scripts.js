@@ -9,4 +9,13 @@ $(document).ready(function() {
 		navigationPosition: 'left',
 		scrollingSpeed: 100,
 	});
+
+	$('.menu_btn').click(function(){
+		$('.menu').addClass('open-menu')
+		$('.menuWrapper').addClass('open-menuWrapper')
+	})
+	$('.close-div').click(function(){
+		$('.menu').removeClass('open-menu')
+		$('.menuWrapper').removeClass('open-menuWrapper')
+	})
 });
