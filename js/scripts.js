@@ -18,8 +18,18 @@ $(document).ready(function() {
 		$('.menu').removeClass('open-menu')
 		$('.menuWrapper').removeClass('open-menuWrapper')
 	})
-	$('.menu').click(function(){
-		$('.menu').removeClass('open-menu')
-		$('.menuWrapper').removeClass('open-menuWrapper')
-	})
+
+
+	const $menu = $('.menuWrapper');
+
+	$(document).mouseup(e => {
+		if (!$menu.is(e.target)
+			&& $menu.has(e.target).length === 0)
+		{
+			$menu.removeClass('open-menuWrapper');
+			$('.menu').removeClass('open-menu')
+
+		}
+	});
+
 });
