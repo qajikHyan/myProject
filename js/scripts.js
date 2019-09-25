@@ -18,4 +18,8 @@ $(document).ready(function() {
 		$('.menu').removeClass('open-menu')
 		$('.menuWrapper').removeClass('open-menuWrapper')
 	})
+	$('.menu').click(function(){
+		$('.menu').removeClass('open-menu')
+		$('.menuWrapper').removeClass('open-menuWrapper')
+	})
 });
