@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
 		sectionsColor: ['#fff', '#fff', '#fff'],
-		anchors:['firstSection', 'secondSection', 'thirdSection', 'fourthSection'],
+		anchors:['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthhSection'],
 		menu: '.main-nav ul',
 		navigation: false,
         // navigationTooltips: ['firstSlide', 'secondSlide', 'secondSlide'],
