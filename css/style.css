@@ -532,6 +532,9 @@ body {
 	.logo-mobile{
 		display: flex;
 	}
+	.icons-mobile{
+		display: block;
+	}
 	.logo-img-mobile{
 		width: 100px;
 	}
