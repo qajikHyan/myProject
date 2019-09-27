@@ -49,34 +49,72 @@ $(document).ready(function() {
 	}
 	  
 	function validate() {
-		var email = $("#mail").val();
-	  
-		if (!validateEmail(email)) {
+		var name = $("#name");
+		var email = $("#mail");
+		var phone = $("#phone");
+		var status = [];
+		if (!validateEmail(email.val())) {
 			$("#mail").css('borderColor','red');
 		} else {
 			$("#mail").css('borderColor','#47c690');
+			status.push('1')
 		}
+
+		if(name.val() == "") name.css('borderColor','red');
+		else{
+			name.css('borderColor','#47c690');
+			status.push('2')
+		}
+
+		if( phone.val() == "" ) phone.parent().css('borderColor','red');
+		else{
+			phone.parent().css('borderColor','#47c690');
+			status.push('3')
+		}
+
+		if(status.length === 3){
+			$('.singnUS').remove();
+			$('#row').prepend(`
+			<div class="col-xl-6 col-lg-6">
+				<p class="text_1">Thanks, for your interest. </p>
+				<h1 class="title1" style="text-transform: inherit"> Bunty, it means a lot </h1>
+				<p class="text_2">We’ll be launching in the coming weeks. <br>
+					We’ll let you know once we’re ready.</p>
+				<h1 class="numberGreen">1230</h1>
+				<p class="text_3">People, ahead of you </p>
+				<p class="text_4">Spread the word with your friends To jump ahead on <br>
+				the queue & start Living Finin’s way of Life</p>
+				<div class="icons_wrapper">
+					<img src="images/icons/google.png" alt="">
+					<img src="images/icons/fb.png" alt="">
+					<img src="images/icons/watsup.png" alt="">
+					<img src="images/icons/tweet.png" alt="">
+				</div>
+			</div>
+			`);
+		}
+		
 		return false;
 	}
 	  
-	$("#mail").on("input", validate);
 	$(".sub").on("click", validate);
+	// $(".sub").on("click", validate);
 
-	$(".sub").click(function(){
-		if($('#name').val() == "" && $('#phone').val() == ""){
-			$('#name').css('borderColor','red');
-			$('#phone').parent().css('borderColor','red');
-		}else{
-			$("#name").css('borderColor','#47c690');
-			$('#phone').parent().css('borderColor','#47c690');
-		}
-	})
-	$('#name').on("input", function(){
-		if($('#name').val() == ""){
-			$('#name').css('borderColor','red');
-		}else{
-			$("#name").css('borderColor','#47c690');
-		}
-	})
+	// $(".sub").click(function(){
+	// 	if($('#name').val() == "" && $('#phone').val() == ""){
+	// 		$('#name').css('borderColor','red');
+	// 		$('#phone').parent().css('borderColor','red');
+	// 	}else{
+	// 		$("#name").css('borderColor','#47c690');
+	// 		$('#phone').parent().css('borderColor','#47c690');
+	// 	}
+	// })
+	// $('#name').on("input", function(){
+	// 	if($('#name').val() == ""){
+	// 		$('#name').css('borderColor','red');
+	// 	}else{
+	// 		$("#name").css('borderColor','#47c690');
+	// 	}
+	// })
 
 });

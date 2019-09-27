@@ -413,7 +413,6 @@ body {
 
 /* singn Up ----------------------------------------- */
 .modal_singl-up{
-    height: 100%;
     position: absolute;
     width: 100%;
     background-color: #fff;
@@ -422,6 +421,7 @@ body {
 	visibility: hidden;
 	opacity: 0;
 	transition: 0.2s;
+	height: 100%;
 }
 .open_modal_singl-up{
 	visibility: visible;
@@ -456,11 +456,13 @@ body {
 	width: 15%;
 	outline: none;
 	border: none;
+	border-right: 2px solid #ccc;
 }
 .phone{
 	border: none;
 	outline: none;
 	width: 85%;
+	padding-left: 5px;
 }
 .sub{
 	padding: 13px;
@@ -480,9 +482,47 @@ body {
 	top: 118px;
 	cursor: pointer;
 }
+.icons_wrapper{
+	display: flex;
+	width: 100%;
+	margin-top: 43px;
+}
+.icons_wrapper>img{
+	width: 82px;
+	margin-right: 16px;
+}
+.text_1{
+	font-size: 18px;
+	color: #1a1b22;
+}
+.text_2{
+	font-size: 14px;
+	font-weight: bold;
+	color: #0d1126;
+	margin: 46px 0 67px 0;
+}
+.numberGreen{
+	font-size: 46px;
+	font-weight: 900;
+	color: #47c690;
+}
+.text_3{
+	font-size: 17px;
+  	font-weight: bold;
+	color: #47c690;
+}
+.text_4{
+	font-size: 14px;
+	color: #041e44;
+}
 @media (max-width: 350px){
 	.inp_form{
 		width: 100%;
+	}
+}
+@media (max-width: 560px){
+	.bb{
+		overflow: auto;
 	}
 }
 @media (min-width:768px) {

@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/fullpage.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/loader.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<!-- <link rel="stylesheet" href="css/animation.css"> -->
 	<style>	
@@ -39,6 +40,10 @@
 </head>
 
 <body>
+	<div class="preloader">
+		<div class="loader">Loading...</div>
+	</div>
+
 	<div class="container position-relative h-100 bb">
 		<div class="navigation">
 			<nav class="main-nav">
@@ -107,8 +112,8 @@
 					<span></span>
 					<span></span>
 				</div>
-				<div class="row">
-					<div class="col-xl-6 col-lg-6">
+				<div class="row" id="row">
+					<div class="col-xl-6 col-lg-6 singnUS">
 						<div class="Rectangle-364"></div>
 						<h1 class="title1" style="text-transform: inherit">Get your free account</h1>
 						<p class="text1" style="font-size: 14px">Book your spot now and get updated with our new upcoming <br>
@@ -292,6 +297,7 @@
 	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
 	<script src="js/jquery.fullpage.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<script src="js/loader.js"></script>
 </body>
 
 </html>
